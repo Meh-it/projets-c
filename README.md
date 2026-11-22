@@ -9,9 +9,9 @@ Projets réalisés en 2026 au Conservatoire National des Arts et Métiers (Cnam)
 | 1 | Sondage entre 5 films | [`01-sondage-films`](01-sondage-films) | Terminé |
 | 2 | Morpion à deux joueurs | [`02-morpion`](02-morpion) | Terminé |
 | 3 | Calculatrice | [`03-calculatrice`](03-calculatrice) | Terminé |
-| 4 | Code secret à retrouver | [`04-code-secret`](04-code-secret) | Terminé |
-| 5 | Message intercepté (déchiffrement) | [`05-message-intercepte`](05-message-intercepte) | Terminé |
-| 6 | Audit de mots de passe fictifs | [`06-audit-mots-de-passe`](06-audit-mots-de-passe) | Terminé |
+| 4 | Mot de passe à deviner en 8 tentatives | [`04-devine-mot-de-passe`](04-devine-mot-de-passe) | Terminé |
+| 5 | Déchiffreur de mot de passe | [`05-dechiffreur-mot-de-passe`](05-dechiffreur-mot-de-passe) | Terminé |
+| 6 | Testeur de fiabilité de mot de passe | [`06-testeur-fiabilite-mot-de-passe`](06-testeur-fiabilite-mot-de-passe) | Terminé |
 | 7 | Blackjack | [`07-blackjack`](07-blackjack) | En cours |
  
 ## Compiler et exécuter
@@ -65,33 +65,33 @@ gcc fichier.c -o programme
  
 ---
  
-## 4. Code secret à retrouver
+## 4. Mot de passe à deviner en 8 tentatives
  
-**Contexte :** Devoir 2, mission 2, à rendre le 20 novembre 2026. Le scénario est fictif : un agent est prisonnier sur une île et doit retrouver le code d'une porte avant d'épuiser ses tentatives.
+**Contexte :** Devoir 2, mission 2 (« Opération 007 : le code du Dr Méchant »), à rendre le 20 novembre 2026. Le scénario est fictif : un agent est prisonnier sur une île et doit retrouver le code d'une porte avant d'épuiser ses tentatives.
  
 **Ce que fait le programme :** un premier utilisateur saisit un code secret de 8 chiffres (de 0 à 9). Le second propose un chiffre à la fois. Si ce chiffre apparaît plusieurs fois dans le code, toutes ses positions sont révélées. Le programme affiche l'état des 8 cases après chaque proposition et compte les tentatives. Le joueur gagne quand plus aucune case n'est inconnue, avec au maximum 8 propositions valides. Une saisie hors de 0 à 9 est redemandée sans compter de tentative.
  
 **Notions utilisées :** deux tableaux d'entiers (`tabSecret[8]` et `tabTentatives[8]`, ce dernier initialisé à `-1`), boucles, conditions, contrôle des saisies.
  
-**Code :** [`04-code-secret/mission2.c`](04-code-secret/mission2.c)
+**Code :** [`04-devine-mot-de-passe/mission2.c`](04-devine-mot-de-passe/mission2.c)
  
 ---
  
-## 5. Message intercepté (déchiffrement)
+## 5. Déchiffreur de mot de passe
  
-**Contexte :** Devoir 2, mission 3, à rendre le 20 novembre 2026. Le scénario est fictif : un message codé a été intercepté et il faut le décoder.
+**Contexte :** Devoir 2, mission 3 (« Carmen Sandiego : le message intercepté »), à rendre le 20 novembre 2026. Le scénario est fictif : un message codé a été intercepté et il faut le décoder.
  
 **Ce que fait le programme :** il parcourt un tableau de 100 entiers compris entre -1 et 25. Chaque `-1` donne un espace. Les autres valeurs sont des indices dans un tableau de 26 lettres rangées dans un ordre différent de l'alphabet. Le message complet est affiché sur une seule ligne. Il est reconstitué par le programme : la phrase n'est pas écrite dans le code.
  
 **Notions utilisées :** tableaux d'entiers et de caractères, boucle `for`, condition sur la valeur lue.
  
-**Code :** [`05-message-intercepte/mission3.c`](05-message-intercepte/mission3.c)
+**Code :** [`05-dechiffreur-mot-de-passe/mission3.c`](05-dechiffreur-mot-de-passe/mission3.c)
  
 ---
  
-## 6. Audit de mots de passe fictifs
+## 6. Testeur de fiabilité de mot de passe
  
-**Contexte :** Devoir 2, mission 4, à rendre le 20 novembre 2026. Le fichier `passConfig.txt` contient 100 mots de passe fictifs de 10 caractères, un par ligne. Le début du programme (ouverture du fichier, lecture avec une boucle `while`, rangement du score dans `scoresGenerale[i]`) était fourni. J'ai écrit le calcul du score et les statistiques.
+**Contexte :** Devoir 2, mission 4 (« Audit de mots de passe fictifs »), à rendre le 20 novembre 2026. Le fichier `passConfig.txt` contient 100 mots de passe fictifs de 10 caractères, un par ligne. Le début du programme (ouverture du fichier, lecture avec une boucle `while`, rangement du score dans `scoresGenerale[i]`) était fourni. J'ai écrit le calcul du score et les statistiques.
  
 **Ce que fait le programme :** pour chaque mot de passe, il calcule un score de vulnérabilité avec deux règles :
 - R1 : +10 pour chaque caractère présent au moins 4 fois ;
@@ -100,7 +100,7 @@ Ensuite, il compte les mots de passe par catégorie (très vulnérable au-dessus
  
 **Notions utilisées :** lecture d'un fichier texte, chaînes de caractères (`char tabCourant[11]`), parcours de tableaux, comptage par catégorie.
  
-**Code :** [`06-audit-mots-de-passe/mission4.c`](06-audit-mots-de-passe/mission4.c)
+**Code :** [`06-testeur-fiabilite-mot-de-passe/mission4.c`](06-testeur-fiabilite-mot-de-passe/mission4.c)
  
 ---
  
@@ -123,5 +123,7 @@ Ensuite, il compte les mots de passe par catégorie (très vulnérable au-dessus
 ## Contact
  
 - E-mail : mehdi.chargui07@gmail.com
+- CV (PDF) : https://meh-it.github.io/Portfolio-Mehdi/Chargui_Mehdi_CV.pdf
 - LinkedIn : https://www.linkedin.com/in/mehdi-chargui-it/
 - Portfolio : https://meh-it.github.io/Portfolio-Mehdi/
+ 
