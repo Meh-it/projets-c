@@ -123,6 +123,5 @@ Ensuite, il compte les mots de passe par catégorie (très vulnérable au-dessus
 ## Contact
  
 - E-mail : mehdi.chargui07@gmail.com
-- CV (PDF) : https://meh-it.github.io/Portfolio-Mehdi/Chargui_Mehdi_CV.pdf
 - LinkedIn : https://www.linkedin.com/in/mehdi-chargui-it/
 - Portfolio : https://meh-it.github.io/Portfolio-Mehdi/
